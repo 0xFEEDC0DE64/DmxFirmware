@@ -1,6 +1,7 @@
 set(headers
     config.h
     debugconsole.h
+    dmx.h
     ota.h
     taskmanager.h
     webserver.h
@@ -10,6 +11,7 @@ set(headers
 set(sources
     config.cpp
     debugconsole.cpp
+    dmx.cpp
     main.cpp
     ota.cpp
     taskmanager.cpp

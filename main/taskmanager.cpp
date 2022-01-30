@@ -15,6 +15,7 @@
 #include "debugconsole.h"
 #include "ota.h"
 #include "webserver.h"
+#include "dmx.h"
 
 using namespace std::chrono_literals;
 
@@ -28,6 +29,7 @@ espcpputils::SchedulerTask schedulerTasksArr[] {
     espcpputils::SchedulerTask { "debugconsole", init_debugconsole, update_debugconsole, 50ms },
     espcpputils::SchedulerTask { "ota_client",   ota_client_init,   ota_client_update,   100ms },
     espcpputils::SchedulerTask { "webserver",    initWebserver,     handleWebserver,     100ms },
+    espcpputils::SchedulerTask { "dmx",          dmx_init,          dmx_update,          50ms },
 };
 } // namespace
 
